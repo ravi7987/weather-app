@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather Port</title>
+        <link rel="icon" href="/weather.png">
+        <link rel="stylesheet" href="/styles.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div>
+             {{>header}}
+            <h1>{{title}}</h1>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                <form action="#">
+                    <div class="form-group">
+                        <label for="location">Location:</label>
+                        <input  placeholder="enter the location" id="location">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                </div>
+                <div class="col-4"></div>
+            </div>
+            <hr>
+            <h3>Temperature for {{location}} is {{forecast.temperature}}'C</h3>
+        </div>
+       
+        {{>footer}}
+        <script src="/app.js"></script>
+    </body>
+</html>

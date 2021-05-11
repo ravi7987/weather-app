@@ -4,6 +4,7 @@ const path = require('path');
 const hbs = require('hbs');
 const forecast = require('./utils/weatherData');
 const geocode = require('./utils/geocode');
+const port = process.env.PORT || 3000;
 
 //setup handlebars config
 app.set('view engine', 'hbs');
@@ -45,6 +46,6 @@ app.get('*', (req,res)=>{
 });
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('your server is up');
 });
